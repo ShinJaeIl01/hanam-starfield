@@ -1,16 +1,28 @@
+/* COMMON */
 body { 
   height: 3000px;
   background-color: antiquewhite;
-  font-weight: normal;
-  font-size: 10px;
-  color: #000;
 }
 a {
   text-decoration: none;
+  font-weight: normal;
   font-size: 10px;
+  color: #000;
+  font-family: 'Noto Sans KR', sans-serif;
 }
-/* HEADER */
+/* ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+} */
 
+
+
+
+/* HEADER */
 header {
   width: 100%;
   border-top: 5px solid #d50032;
@@ -21,63 +33,77 @@ header {
 }
 .headerLogo {
   text-align: center;
-  padding-top: 2.1rem;
+  padding-top: 1.3rem;
 }
-
 .headerLogo a {
-  height: 8.8rem;
+  height: 5.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.headerLogo img {
+  width: 220px;
+}
 
-/* HEADER MENU */
+
+.megeMenu {
+
+}
+.megeMenu .weather {
+
+}
+.megeMenu .info {
+
+}
+
 .megaMenuList {
-
+  background: url("../image/bg_megaMenuList.png") repeat-x left 3.6rem;
+  /* background-color: royalblue; */
+  padding: 0 0;
 }
 .megaMenuList .container {
+  width: 1024px;
   position: relative;
-  height: auto;
+  margin: 0 auto;
   text-align: center;
-  background-color: #fff;
 }
 .megaMenuList .container .flexList {
-  width: 100vw;
-  display: flex;
   margin-left: 10%;
-  
-}
-.megaMenuList .container .flexList .item1 {
   position: relative;
+  padding-top: 3.6rem;
+  display: flex;
+  justify-content: center;
 }
-.megaMenuList .container .flexList .item1 .titMenu {
-
+.megaMenuList .container .flexList>li {
+  flex-grow: 1;
 }
-.megaMenuList .container .flexList .item1 .titMenu .titweb {
+ 
+.megaMenuList .container .flexList .titMenu {
+  position: absolute;
+  top: 0;
+  padding: 0 0;
+}
+.megaMenuList .container .flexList .titMenu .titweb {
   display: block;
-  padding: 2rem 0;
+  padding: 1.3rem 0;
   width: 100%;
   color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 500;
 }
-.megaMenuList .container .flexList .item1 .hideMenuBox {
-  width: 100%;
-  height: auto;
+.megaMenuList .container .flexList .hideMenu {
   display: none;
-  border-top: 2px solid #d50032;
-}
-.megaMenuList .container .flexList .item1:hover .hideMenuBox {
-  display: block;
-}
-.megaMenuList .container .flexList .item1 .hideMenu {
-  width: 100%;
   height: 309px;
-  padding-top: 27px;
-  margin-top: 0px;
-  padding-bottom: 40px;
-  margin-bottom: 0px;
-  background-color: #fff;
+  /* margin-left: 1.2rem; */
+  font-size: 1.1rem;
+  padding: 1rem 0 4.8rem 0;
+}
+/* 왜 따로 나타나지? */
+.megaMenuList .container .flexList .titMenu:hover~.hideMenu {
+ display: block;
+}
+.megaMenuList .container .flexList .hideMenu li {
+  text-align: center;
 }
 .megaMenuList .container .flexList .hideMenu a {
   text-align: center;
