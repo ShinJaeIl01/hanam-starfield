@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>스타필드 하남</title>
 
+  <!-- 아이콘 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +18,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
   <link rel="stylesheet" href="./css/main.css" />
 
+  <!-- JS -->
+  <script defer src="./js/main.js"></script>
 </head>
 <body>
 
@@ -25,8 +30,20 @@
       </a>
     </div>
     <div class="megaMenu">  <!--로고 외에 모든게 들어감-->
-      <div class="weather"></div>
-      <div class="info"></div>
+      <div class="weather">
+        <div class="weatherIcon">
+          <img class="weIcon"></img>
+        </div>
+        <div id="current_date"></div>
+        <span class="openHour">
+          <span class="title">운영시간</span>
+          <span class="colorRed">10:00~22:00</span>
+        </span>
+      </div>
+      <div class="info">
+        <span class="login">로그인</span>
+        <div class="material-icons">search</div>
+      </div>
       <div class="megaMenuList">
         <div class="container">
           <ul class="flexList">
