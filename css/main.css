@@ -1,170 +1,145 @@
-/* COMMON */
-body { 
-  height: 3000px;
-  background-color: antiquewhite;
+body {
+  height: 2000px;
+  background-color: skyblue;
   font-size: 10px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 a {
+  display: block;
   text-decoration: none;
   font-weight: normal;
   font-size: 10px;
   color: #000;
   font-family: 'Noto Sans KR', sans-serif;
 }
-/* ul {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding-inline-start: 40px;
-} */
-
-
-
-
-/* HEADER */
-header {
-  width: 100%;
-  border-top: 5px solid #d50032;
-  position: fixed;
-  z-index: 10;
-  background-color: #fff;
-}
-.headerLogo {
-  text-align: center;
-  padding-top: 1.3rem;
-}
-.headerLogo a {
-  height: 5.8rem;
+.Inner {
+  width: calc((1024px/10)*8);
+  height: auto;
   display: flex;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
 }
-.headerLogo img {
-  width: 220px;
-}
 
 
-.megaMenu {
-  position: relative;
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  border-top: 5px solid #d50032;
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  left: 0;
 }
-.megaMenu .weather {
-  position: absolute;
-  width: 30%;
-  height: auto;
-  top: -3rem;
-  left: 3rem;
-  color: #555;
+.topBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.3rem;
+  color: #555555;
   font-size: 0.9rem;
   font-weight: 500;
 }
-.megaMenu .weather * {
-  display: block;
-}
-.megaMenu .weather .weIcon .weatherIcon {
-
-}
-.megaMenu .weather .weIcon {
-  float: left;
-  width: 60px;
+.topBox .weather {
+  width: 250px;
   height: 100%;
-  
+  flex-shrink: 0;
+  margin-left: 30px;
+  /* background-color: antiquewhite; */
 }
-.megaMenu .weather .openHour {
+.topBox .weather .weatherIcon {
+  height: 100%;
+  float: left;
+  margin-right: 10px;
+}
+.topBox .weather .textBox {
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topBox .weather .openHour {
   display: flex;
   margin-top: 3px;
 }
-.megaMenu .weather .openHour .title { 
+.topBox .weather .openHour .open {
 
 }
-.megaMenu .weather .openHour .colorRed {
-  margin-left: 3px;
+.topBox .weather .openHour .time {
+  margin-left: 0.3rem;
   color: #c30e2e;
 }
-.megaMenu .info {
-  position: absolute;
+header .logoBox {
+  right: 0;
+  left: 0;
+  flex-grow: 1;
+}
+header .logo {
+  width: 220px;
+  display: block;
+  margin: 0 auto;
+}
+.topBox .info {
+  width: 250px;
+  flex-shrink: 0;
+  margin-right: 30px;
+  /* background-color: antiquewhite; */
+}
+.topBox .info .infoBox {
   display: flex;
-  top: -3rem;
-  right: 3rem;
+  align-items: center;
+  flex-direction: row-reverse;
+  margin-right: ;
 }
-.megaMenu .info span {
-  /* position: absolute; */
-  /* vertical-align: unset; */
-  font-size: 15px;
-  color: #555;
-  margin-right: 14px;
-}
-.megaMenu .info .login::after {
+.topBox .info .infoBox .search::before {
   content: "";
-  position: absolute;
-  border: #555 solid 1px;
-  height: 13px;
-  top: -3px;
-  bottom: 0;
-  margin: auto 7px;
-}
-.megaMenu .info .material-icons {
-  color: #555;
-  font-size: 20px;
-  padding: 0 0 0 5px;
+  width: 0.1rem;
+  height: 0.9rem;
+  display: inline-block;
+  background: #aeaeae;
+  margin: auto 1.4rem;
+  margin-bottom: 0.1rem;
 }
 
-.megaMenuList {
-  background: url("../image/bg_megaMenuList.png") repeat-x left 3.6rem;
-  /* background-color: royalblue; */
+header .menu {
+  /* background-color: rgb(103, 220, 156); */
 }
-.megaMenuList .container {
-  width: 1024px;
-  position: relative;
-  margin: 0 auto;
+header .menu .title {
+  /* 플렉스 아이템 */
+  width: 16.66%;
   text-align: center;
+  padding: 1.4rem 0;
 }
-.megaMenuList .container .flexList {
-  margin-left: 10%;
-  /* position: relative; */
-  padding-top: 3.6rem;
-  display: flex;
-  /* justify-content: center; */
-}
-.megaMenuList .container .flexList>li {
-  flex-grow: 1;
-  position: relative;
-}
-.megaMenuList .container .flexList .titMenu {
-  position: absolute;
-  top: -3.6rem;
-  left: 0;
-  right: 0;
-  /* margin: 0 auto; */
-}
-.megaMenuList .container .flexList .titMenu .titweb {
-  display: block;
-  padding: 1.3rem 0;
-  /* width: 100%; */
-  color: #000;
+header .menu .title a {
   font-size: 1rem;
   font-weight: 500;
 }
-.megaMenuList .container .flexList .hideMenu {
+/* 아이콘띄우기 */
+header .menu .title:hover {
+
+}
+/* 메뉴창 열기 */
+header .menu:hover~.hide {
+  display: block;
+}
+header .hide {
   display: none;
-  height: 309px;
-  /* margin-left: 1.2rem; */
-  font-size: 1.1rem;
+  border-top: 2px solid red;
+  /* background-color: rgb(130, 92, 50); */
+  right: 0;
+  left: 0;
+}
+header .hide .Inner {
+  top: 1.3rem;
+  /* background-color: tan; */
+}
+header .hide .Inner .hideGrow {
+  width: 16.66%;
+  text-align: center;
   padding: 1rem 0 4.8rem 0;
-  flex-grow: 1;
 }
-/* 왜 따로 나타나지? */
-.megaMenuList .container .flexList:hover .hideMenu {
- display: block;
-}
-.megaMenuList .container .flexList .hideMenu li {
-  
-}
-.megaMenuList .container .flexList .hideMenu a {
-  /* text-align: center; */
-  line-height: 2.5rem;
-  color: #515151;
+header .hide .Inner .hideGrow a {
+  line-height: 2rem;
   font-size: 0.8rem;
 }

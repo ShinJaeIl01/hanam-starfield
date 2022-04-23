@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>스타필드 하남</title>
 
-  <!-- 아이콘 -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <!-- FAVICON -->
+  <link rel="icon" href="./image/favicon.png" />
+  
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,171 +16,165 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
-  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="stylesheet" href="./css/main.css">
 
-  <!-- JS -->
+  <!-- Javascript -->
   <script defer src="./js/main.js"></script>
 </head>
 <body>
+  
 
   <header>
-    <div class="headerLogo">  <!-- 큰 틀에서 내용이 들어갈 공간과 여백 공간 나눠줘, 로고만 들어감 -->
-      <a href="https://www.starfield.co.kr/hanam/main.do">
-        <img src="https://www.starfield.co.kr/cdn/starfield_01/bnc/20171030/IM20171030020322308387.png" alt="하남스타필드로고">
-      </a>
-    </div>
-    <div class="megaMenu">  <!--로고 외에 모든게 들어감-->
+    <div class="topBox">
       <div class="weather">
         <div class="weatherIcon">
-          <img class="weIcon"></img>
+          <img src="./image/icon_pcWeg12.png" alt="">
         </div>
-        <div id="current_date"></div>
-        <span class="openHour">
-          <span class="title">운영시간</span>
-          <span class="colorRed">10:00~22:00</span>
-        </span>
+        <div class="textBox">
+          <div id="current_date"></div>
+          <div class="openHour">
+            <div class="open">운영시간</div>
+            <div class="time">10:00~22:00</div>
+          </div>
+        </div>
       </div>
+      <a href="https://www.starfield.co.kr/hanam/main.do" class="logoBox">
+        <img src="./image/logo.png" alt="" class="logo"></img>
+      </a>
       <div class="info">
-        <span class="login">로그인</span>
-        <div class="material-icons">search</div>
-      </div>
-      <div class="megaMenuList">
-        <div class="container">
-          <ul class="flexList">
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">스타필드 하남</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">점포 소개</a>
-                  </li>
-                  <li>
-                    <a href="">층별 안내</a>
-                  </li>
-                  <li>
-                    <a href="">카테고리 안내</a>
-                  </li>
-                  <li>
-                    <a href="">편의시설</a>
-                  </li>
-                  <li>
-                    <a href="">오시는길</a>
-                  </li>
-                  <li>
-                    <a href="">주차안내</a>
-                  </li>
-                  <li>
-                    <a href="">대관안내</a>
-                  </li>
-                  <li>
-                    <a href="">베스트 캠페인</a>
-                  </li>
-                </ul>
-            </li>
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">핫플레이스</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">신세계 백화점</a>
-                  </li>
-                  <li>
-                    <a href="">이마트 트레이더스</a>
-                  </li>
-                  <li>
-                    <a href="">일렉트로마트</a>
-                  </li>
-                  <li>
-                    <a href="">토이킹덤</a>
-                  </li>
-                  <li>
-                    <a href="">마리스베이비써클</a>
-                  </li>
-                  <li>
-                    <a href="">몰리스 펫샵</a>
-                  </li>
-                  <li>
-                    <a href="">스타필드 맨즈</a>
-                  </li>
-                  <li>
-                    <a href="">한샘</a>
-                  </li>
-                  <li>
-                    <a href="">BMW MINI</a>
-                  </li>
-                </ul>
-            </li>
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">엔터테인먼트</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">아쿠아필드</a>
-                  </li>
-                  <li>
-                    <a href="">스포츠몬스터</a>
-                  </li>
-                  <li>
-                    <a href="">메가박스</a>
-                  </li>
-                  <li>
-                    <a href="">영풍문고</a>
-                  </li>
-                </ul>
-            </li>
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">레스토랑&카페</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">고메스트리트</a>
-                  </li>
-                  <li>
-                    <a href="">잇토피아</a>
-                  </li>
-                </ul>
-            </li>
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">이벤트&카페</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">이벤트</a>
-                  </li>
-                  <li>
-                    <a href="">브랜드 행사</a>
-                  </li>
-                  <li>
-                    <a href="">쿠폰</a>
-                  </li>
-                </ul>
-            </li>
-            <li class="">
-              <h2 class="titMenu">
-                <a href="" class="titweb">고객센터</a>
-              </h2>
-                <ul class="hideMenu">
-                  <li>
-                    <a href="">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="">공지사항</a>
-                  </li>
-                  <li>
-                    <a href="">고객문의</a>
-                  </li>
-                </ul>
-            </li>
-          </ul>
+        <div class="infoBox">
+          <div class="search">
+              <img src="./image/btn_pcSearchOpen.png" alt="">
+          </div>
+          <div class="login">로그인</div>
         </div>
       </div>
-    </div> 
+    </div>
+    <div class="menu Inner">
+      <div class="title">
+        <a href="">스타필드 하남</a>
+      </div>
+      <div class="title">
+        <a href="">핫플레이스</a>
+      </div>
+      <div class="title">
+        <a href="">엔터테인먼트</a>
+      </div>
+      <div class="title">
+        <a href="">레스토랑&카페</a>
+      </div>
+      <div class="title">
+        <a href="">이벤트&해택</a>
+      </div>
+      <div class="title">
+        <a href="">고객센터</a>
+      </div>
+    </div>
+    <div class="hide">
+      <div class="Inner">
+        <ul class="hideGrow">
+          <li>
+            <a href="">점포 소개</a>
+          </li>
+          <li>
+            <a href="">층별 안내</a>
+          </li>
+          <li>
+            <a href="">카테고리 안내</a>
+          </li>
+          <li>
+            <a href="">편의시설</a>
+          </li>
+          <li>
+            <a href="">오시는길</a>
+          </li>
+          <li>
+            <a href="">주차안내</a>
+          </li>
+          <li>
+            <a href="">대관안내</a>
+          </li>
+          <li>
+            <a href="">베스트 캠페인</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">신세계 백화점</a>
+          </li>
+          <li>
+            <a href="">이마트 트레이더스</a>
+          </li>
+          <li>
+            <a href="">일렉트로마트</a>
+          </li>
+          <li>
+            <a href="">토이킹덤</a>
+          </li>
+          <li>
+            <a href="">마리스베이비써클</a>
+          </li>
+          <li>
+            <a href="">몰리스 펫샵</a>
+          </li>
+          <li>
+            <a href="">스타필드 맨즈</a>
+          </li>
+          <li>
+            <a href="">한샘</a>
+          </li>
+          <li>
+            <a href="">BMW MINI</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">아쿠아필드</a>
+          </li>
+          <li>
+            <a href="">스포츠몬스터</a>
+          </li>
+          <li>
+            <a href="">메가박스</a>
+          </li>
+          <li>
+            <a href="">영풍문고</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">고메스트리트</a>
+          </li>
+          <li>
+            <a href="">잇토피아</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">이벤트</a>
+          </li>
+          <li>
+            <a href="">브랜드 행사</a>
+          </li>
+          <li>
+            <a href="">쿠폰</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">FAQ</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">고객문의</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
+
 
 </body>
 </html>
