@@ -25,7 +25,7 @@ a {
 header {
   width: 100%;
   position: fixed;
-  z-index: 10;
+  z-index: 9;
   border-top: 5px solid #d50032;
   background-color: #fff;
   position: fixed;
@@ -140,6 +140,75 @@ header .hide .Inner .hideGrow {
   padding: 1rem 0 4.8rem 0;
 }
 header .hide .Inner .hideGrow a {
-  line-height: 2rem;
+  line-height: 2.2rem;
   font-size: 0.8rem;
+}
+
+
+.badges  {
+  background-color: #64635d;
+  position: fixed;
+  top: 157px;
+  right: 0;
+  z-index: 10;
+  text-align: center;
+}
+.badges .badgesBox .badge,
+.badges .badgesBox .store span,
+.badges .topBtn {
+  font-size: 0.7rem;
+}
+.badges .badge {
+  width: 87px;
+  height: 88px;
+  border-bottom: 1px solid #cdccca;
+  background-color: #e7e6e2;
+  color: #64635d;
+}
+.badges .badge:first-child {
+  border-bottom: none;
+}
+.badges .red {
+  background-color: #d50032;
+}
+.badges .red span {
+  color: #fff;
+}
+.badges .store {
+  width: 87px;
+}
+
+.badges .store a {
+  padding: 0 11px;
+  color: #fff;
+}
+.badges .store span {
+  display: block;
+  padding: 18px 0;
+  border-bottom: 1px solid #919293;
+}
+.badges .store .none {
+  border-bottom: none;
+}
+.badges .store em {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.badges .store {
+  height: 0px;
+  overflow: hidden;
+}
+.badges .block {
+  height: 577px;
+  transition: height 1s;
+}
+.badges .topBtn {
+  height: 42px;
+  color: #fff;
+}
+.badges .topBtn img {
+  margin-top: 10px;
+  padding-bottom: 3px;
 }
