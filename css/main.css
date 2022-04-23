@@ -207,6 +207,7 @@ header .hide .Inner .hideGrow a {
 .badges .topBtn {
   height: 42px;
   color: #fff;
+  cursor: pointer;
 }
 .badges .topBtn img {
   margin-top: 10px;

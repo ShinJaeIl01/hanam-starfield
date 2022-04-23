@@ -21,3 +21,13 @@ function toggleQuickSubMenu() {
 }
 
 badgeRed.addEventListener("click",toggleQuickSubMenu)
+
+
+// 상단 이동
+const topEl = document.querySelector('.topBtn');
+
+topEl.addEventListener('click', function () {
+  gsap.to(window, .7, {
+    scrollTo: 0
+  })
+})
