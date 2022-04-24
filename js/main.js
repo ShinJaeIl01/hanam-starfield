@@ -82,3 +82,20 @@ new Swiper('.topMain .swiper', {
 //   swiper.autoplay.stop();
 //   return false;
 //  });
+
+
+new Swiper('.filMain .swiper', {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  centeredSlides: true, 
+  loop: true,
+  // autoplay: {
+  //   delay: 4000
+  // },
+
+  
+  navigation: {
+    prevEl: '.filMain .swiper-prev',
+    nextEl: '.filMain .swiper-next',
+  }
+});

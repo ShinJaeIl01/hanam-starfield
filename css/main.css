@@ -1,6 +1,7 @@
 /* COMMON */
 body {
-  height: 2000px;
+  position: relative;
+  /* height: 2000px; */
   /* background-color: blanchedalmond; */
   font-size: 10px;
   font-family: 'Noto Sans KR', sans-serif;
@@ -337,3 +338,125 @@ header .hide .Inner .hideGrow a {
   color: #666;
   font-size: 0.7rem;
 }
+
+
+
+
+/* FILMAIN */
+/* FILMAIN */
+.filMain {
+  width: 100%;
+  height: 100%;
+  background-image: url("../image/bg_swypeFieldWrap.jpg");
+  /* background-color: darkgoldenrod; */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  padding: 6rem 0 8rem 0;
+}
+.filMain::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 7;
+  background-image: url('../image/bg_mainSwypeFieldLeft.png');
+  background-position: right center;
+  left: 0;
+}
+.filMain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 10%;
+  z-index: 7;
+  background-image: url('../image/bg_mainSwypeFieldRigth.png');
+  background-position: left center;
+  right: 0;
+}
+.filMain .filBox .filTitle .bigTil {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.filMain .filBox .filTitle .smTil {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+.filMain .swiper {
+  padding-top: 3.5rem;
+}
+.filMain .swiper-slide {
+  width: 266px;
+}
+.filMain .swiper-slide img {
+  width: 266px;
+}
+.filMain .swiper-slide-active {
+  width: 380px;
+}
+.filMain .swiper-slide-active img {
+  width: 380px;
+}
+.filMain .swiper .swiper-slide-next,
+.filMain .swiper .swiper-slide-prev {
+  width: 342px;
+}
+.filMain .swiper .swiper-slide-next img,
+.filMain .swiper .swiper-slide-prev img {
+  width: 342px;
+}
+
+
+
+
+
+
+/* .filMain .platBtn {
+  background-image: url('../image/btn_commonStop.png');
+  border-radius: 1.5rem 1.5rem;
+  background-color: rgba(0,0,0,0.4);
+  padding: 0.8rem 1.7rem;
+  z-index: 8;
+}
+.topMain .swiper-pagination .swiper-pagination-bullet {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 0.7rem 0.7rem;
+  background-color: #fff;
+  opacity: 1;
+  margin-left: 0.8rem;
+}
+.topMain .swiper-pagination .swiper-pagination-bullet:first-child {
+  margin-left: 0;
+}
+.topMain .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #c30e2e;
+}
+.topMain .swiper-prev {
+  width: 7rem;
+  height: 100%;
+  position: absolute;
+  top: 284px;
+  left: 0;
+  z-index: 5;
+  text-align: center;
+}
+.topMain .swiper-next {
+  width: 7rem;
+  height: 100%;
+  position: absolute;
+  top: 284px;
+  right: 0;
+  z-index: 5;
+  text-align: center;
+} */
