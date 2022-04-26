@@ -17,11 +17,17 @@ const badgesEl = document.querySelector('.badges')
 const badgeRed = document.querySelector('.red')
 const store = document.querySelector('.store')
 
-function toggleQuickSubMenu() {
-  store.classList.add('block')
-}
-
-badgeRed.addEventListener("click",toggleQuickSubMenu)
+let isHideBadge = true;
+badgeRed.addEventListener('click', function () {
+  isHideBadge = !isHideBadge
+  if (isHideBadge) {
+    //숨김처리
+    store.classList.add('block');
+  } else {
+    //보임처리 
+    store.classList.remove('block');
+  }
+});
 
 
 
@@ -37,27 +43,8 @@ topEl.addEventListener('click', function () {
 
 
 
-// 메인이미지 스와이퍼
-// 메인이미지 스와이퍼
-
-// new Swiper('.topMain .swiper', {
-//   slidesPerView: 1, //한번에 보여줄 슬라이드 개수
-//   loop: true,
-//   // autoplay: {
-//   //   delay: 5000
-//   // },
-//   pagination: {
-//     el: '.topMain .swiper-pagination', //페이지 번호 요소 선택자
-//     clickable: true //사용자의 페이지 번호 요소 제어
-//   },
-//   navigation: {
-//     prevEl: '.topMain .swiper-prev',
-//     nextEl: '.topMain .swiper-next'
-//   }
-// });
-
-
-
+// 메인상단이미지 스와이퍼
+// 메인상단이미지 스와이퍼
 new Swiper('.topMain .swiper', {
   loop: true,
   autoplay: {
@@ -74,28 +61,99 @@ new Swiper('.topMain .swiper', {
   }
 });
 
-// $('.start').on('click',function(){
-//   swiper.autoplay.start();
-//   return false;
-//  })
-// $('.stop').on('click',function(){
-//   swiper.autoplay.stop();
-//   return false;
-//  });
 
 
+
+// 메인스페셜이미지 스와이퍼
+// 메인스페셜이미지 스와이퍼
 new Swiper('.filMain .swiper', {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  centeredSlides: true, 
   loop: true,
-  // autoplay: {
-  //   delay: 4000
-  // },
+  speed: 1000,
+  
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: '4',
+  coverflowEffect: {
+    scale: 0.9,
+    rotate: 0,
+    stretch: -10,
+    depth: 1,
+    modifier: 1,
+    slideShadows: false,
+  },
 
   
   navigation: {
     prevEl: '.filMain .swiper-prev',
     nextEl: '.filMain .swiper-next',
+  }
+});
+
+// const playBtn = document.querySelector('.platBtn')
+
+// function filmainPlay() {
+//   Swiper('.filMain .swiper', {
+//     autoplay: {
+//       delay: 3000,
+//     },  
+//   },
+// }
+
+// playBtn.addEventListener('click',filmainPlay)
+
+
+
+
+
+
+
+// 메인베스트캠페인 스와이퍼
+// 메인베스트캠페인 스와이퍼
+new Swiper('.bestMain .swiper', {
+  effect: 'coverflow',
+  slidesPerView: 3,
+  spaceBetween: 20,
+  // initialSlide: 1,
+  centeredSlides: true,
+  loop: true,
+  slideShadows:true,
+  
+  coverflowEffect: {
+    scale: 0.9,
+    // stretch: 0,
+    rotate : 0,
+    depth: 10,
+    modifier: 1,
+    slideShadows : false
+  },
+
+    pagination: {
+      el: '.bestMain .swiper-pagination', //페이지 번호 요소 선택자
+      clickable: true //사용자의 페이지 번호 요소 제어
+    },
+    navigation: {
+      prevEl: '.bestMain .swiper-prev',
+      nextEl: '.bestMain .swiper-next'
+    }
+  });
+
+
+
+
+// 푸터언어클릭 이벤트
+// 푸터언어클릭 이벤트
+const korean = document.querySelector('.korean')
+const koList = document.querySelector('.koList')
+
+let isHideKoList = true;
+korean.addEventListener('click', function () {
+  isHideKoList = !isHideKoList
+  if (isHideKoList) {
+    //숨김처리
+    koList.classList.add('block');
+  } else {
+    //보임처리 
+    koList.classList.remove('block');
   }
 });
