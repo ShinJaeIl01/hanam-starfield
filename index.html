@@ -13,6 +13,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js" integrity="sha512-6zTDRWNxo8vI6JZYDCwhrJpg5icK3P4HNnW3czsO5Scb3lAoPDam+/wF3eog4hxcl0h44d0XlIcFkuoSaWHQ2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/ScrollToPlugin.min.js" integrity="sha512-7DWrlu5tqVVJlJ8Bo5sYcs45ZDyI0givp3xMQcf2dC76IkU5eap8/yCjoEtBWU+tUYCsbOBQ5RyAGnuq7ZZI0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- LODASH -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <!-- SWIPER -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -81,111 +84,248 @@
     <div class="title">
       <a href="">고객센터</a>
     </div>
-  </div>
-  <div class="hide">
-    <div class="Inner">
-      <ul class="hideGrow">
-        <li>
-          <a href="">점포 소개</a>
-        </li>
-        <li>
-          <a href="">층별 안내</a>
-        </li>
-        <li>
-          <a href="">카테고리 안내</a>
-        </li>
-        <li>
-          <a href="">편의시설</a>
-        </li>
-        <li>
-          <a href="">오시는길</a>
-        </li>
-        <li>
-          <a href="">주차안내</a>
-        </li>
-        <li>
-          <a href="">대관안내</a>
-        </li>
-        <li>
-          <a href="">베스트 캠페인</a>
-        </li>
-      </ul>
-      <ul class="hideGrow">
-        <li>
-          <a href="">신세계 백화점</a>
-        </li>
-        <li>
-          <a href="">이마트 트레이더스</a>
-        </li>
-        <li>
-          <a href="">일렉트로마트</a>
-        </li>
-        <li>
-          <a href="">토이킹덤</a>
-        </li>
-        <li>
-          <a href="">마리스베이비써클</a>
-        </li>
-        <li>
-          <a href="">몰리스 펫샵</a>
-        </li>
-        <li>
-          <a href="">스타필드 맨즈</a>
-        </li>
-        <li>
-          <a href="">한샘</a>
-        </li>
-        <li>
-          <a href="">BMW MINI</a>
-        </li>
-      </ul>
-      <ul class="hideGrow">
-        <li>
-          <a href="">아쿠아필드</a>
-        </li>
-        <li>
-          <a href="">스포츠몬스터</a>
-        </li>
-        <li>
-          <a href="">메가박스</a>
-        </li>
-        <li>
-          <a href="">영풍문고</a>
-        </li>
-      </ul>
-      <ul class="hideGrow">
-        <li>
-          <a href="">고메스트리트</a>
-        </li>
-        <li>
-          <a href="">잇토피아</a>
-        </li>
-      </ul>
-      <ul class="hideGrow">
-        <li>
-          <a href="">이벤트</a>
-        </li>
-        <li>
-          <a href="">브랜드 행사</a>
-        </li>
-        <li>
-          <a href="">쿠폰</a>
-        </li>
-      </ul>
-      <ul class="hideGrow">
-        <li>
-          <a href="">FAQ</a>
-        </li>
-        <li>
-          <a href="">공지사항</a>
-        </li>
-        <li>
-          <a href="">고객문의</a>
-        </li>
-      </ul>
+    <div class="hide">
+      <div class="Inner">
+        <ul class="hideGrow">
+          <li>
+            <a href="">점포 소개</a>
+          </li>
+          <li>
+            <a href="">층별 안내</a>
+          </li>
+          <li>
+            <a href="">카테고리 안내</a>
+          </li>
+          <li>
+            <a href="">편의시설</a>
+          </li>
+          <li>
+            <a href="">오시는길</a>
+          </li>
+          <li>
+            <a href="">주차안내</a>
+          </li>
+          <li>
+            <a href="">대관안내</a>
+          </li>
+          <li>
+            <a href="">베스트 캠페인</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">신세계 백화점</a>
+          </li>
+          <li>
+            <a href="">이마트 트레이더스</a>
+          </li>
+          <li>
+            <a href="">일렉트로마트</a>
+          </li>
+          <li>
+            <a href="">토이킹덤</a>
+          </li>
+          <li>
+            <a href="">마리스베이비써클</a>
+          </li>
+          <li>
+            <a href="">몰리스 펫샵</a>
+          </li>
+          <li>
+            <a href="">스타필드 맨즈</a>
+          </li>
+          <li>
+            <a href="">한샘</a>
+          </li>
+          <li>
+            <a href="">BMW MINI</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">아쿠아필드</a>
+          </li>
+          <li>
+            <a href="">스포츠몬스터</a>
+          </li>
+          <li>
+            <a href="">메가박스</a>
+          </li>
+          <li>
+            <a href="">영풍문고</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">고메스트리트</a>
+          </li>
+          <li>
+            <a href="">잇토피아</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">이벤트</a>
+          </li>
+          <li>
+            <a href="">브랜드 행사</a>
+          </li>
+          <li>
+            <a href="">쿠폰</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">FAQ</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">고객문의</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </header>
+
+
+<!-- HEADSCROLL -->
+<!-- HEADSCROLL -->
+<div class="headScroll">
+  <div class="logo">
+    <a href="https://www.starfield.co.kr/hanam/main.do" class="logoBox">
+      <img src="./image/logo.png" alt="" class="logoImg" />
+    </a>
+  </div>
+  <div class="menu Inner">
+    <div class="title">
+      <a href="">스타필드 하남</a>
+    </div>
+    <div class="title">
+      <a href="">핫플레이스</a>
+    </div>
+    <div class="title">
+      <a href="">엔터테인먼트</a>
+    </div>
+    <div class="title">
+      <a href="">레스토랑&카페</a>
+    </div>
+    <div class="title">
+      <a href="">이벤트&혜택</a>
+    </div>
+    <div class="title">
+      <a href="">고객센터</a>
+    </div>
+    <div class="hide">
+      <div class="Inner">
+        <ul class="hideGrow">
+          <li>
+            <a href="">점포 소개</a>
+          </li>
+          <li>
+            <a href="">층별 안내</a>
+          </li>
+          <li>
+            <a href="">카테고리 안내</a>
+          </li>
+          <li>
+            <a href="">편의시설</a>
+          </li>
+          <li>
+            <a href="">오시는길</a>
+          </li>
+          <li>
+            <a href="">주차안내</a>
+          </li>
+          <li>
+            <a href="">대관안내</a>
+          </li>
+          <li>
+            <a href="">베스트 캠페인</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">신세계 백화점</a>
+          </li>
+          <li>
+            <a href="">이마트 트레이더스</a>
+          </li>
+          <li>
+            <a href="">일렉트로마트</a>
+          </li>
+          <li>
+            <a href="">토이킹덤</a>
+          </li>
+          <li>
+            <a href="">마리스베이비써클</a>
+          </li>
+          <li>
+            <a href="">몰리스 펫샵</a>
+          </li>
+          <li>
+            <a href="">스타필드 맨즈</a>
+          </li>
+          <li>
+            <a href="">한샘</a>
+          </li>
+          <li>
+            <a href="">BMW MINI</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">아쿠아필드</a>
+          </li>
+          <li>
+            <a href="">스포츠몬스터</a>
+          </li>
+          <li>
+            <a href="">메가박스</a>
+          </li>
+          <li>
+            <a href="">영풍문고</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">고메스트리트</a>
+          </li>
+          <li>
+            <a href="">잇토피아</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">이벤트</a>
+          </li>
+          <li>
+            <a href="">브랜드 행사</a>
+          </li>
+          <li>
+            <a href="">쿠폰</a>
+          </li>
+        </ul>
+        <ul class="hideGrow">
+          <li>
+            <a href="">FAQ</a>
+          </li>
+          <li>
+            <a href="">공지사항</a>
+          </li>
+          <li>
+            <a href="">고객문의</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="search">
+    <img src="./image/btn_pcSearchOpen.png" alt="" />
+  </div>
+</div>
 
 
 
@@ -282,51 +422,50 @@
         <div class="textBox">
           <img src="./image/topMain text01.png" alt="메인텍스트01">
         </div>
-        <img src="./image/topMain img01.jpg" alt="메인이미지01">
+        <img src="./image/topMain img01.jpg" alt="메인이미지01" class="bgimg">
       </a>
       <a href="javascript:void(0)"  class="swiper-slide">
         <div class="textBox">
           <img src="./image/topMain text02.png" alt="메인텍스트02">
         </div>
-        <img src="./image/topMain img02.jpg" alt="메인이미지02">
+        <img src="./image/topMain img02.jpg" alt="메인이미지02" class="bgimg">
       </a>
       <a href="javascript:void(0)" class="swiper-slide">
-        <img src="./image/topMain img03.jpg" alt="메인이미지03">
+        <img src="./image/topMain img03.jpg" alt="메인이미지03" class="bgimg">
         <div class="textBox">
-          <img src="./image/topMain text03.png" alt="메인텍스트03">
+          <img src="./image/topMain text03.png" alt="메인텍스트03" >
         </div>
       </a>
       <a href="javascript:void(0)" class="swiper-slide">
-        <img src="./image/topMain img04.jpg" alt="메인이미지04">
+        <img src="./image/topMain img04.jpg" alt="메인이미지04" class="bgimg">
         <div class="textBox">
-          <img src="./image/topMain text04.png" alt="메인텍스트04">
+          <img src="./image/topMain text04.png" alt="메인텍스트04" >
         </div>
       </a>
       <a href="javascript:void(0)" class="swiper-slide">
-        <img src="./image/topMain img05.jpg" alt="메인이미지05">
+        <img src="./image/topMain img05.jpg" alt="메인이미지05" class="bgimg">
         <div class="textBox">
-          <img src="./image/topMain text05.png" alt="메인텍스트05">
+          <img src="./image/topMain text05.png" alt="메인텍스트05" >
         </div>
       </a>
       <a href="javascript:void(0)" class="swiper-slide">
-        <img src="./image/topMain img06.jpg" alt="메인이미지06">
+        <img src="./image/topMain img06.jpg" alt="메인이미지06" class="bgimg">
         <div class="textBox">
-          <img src="./image/topMain text06.png" alt="메인텍스트06">
+          <img src="./image/topMain text06.png" alt="메인텍스트06" >
         </div>
       </a>
     </div>
   </div>
-  <div class="swiper-pagination"></div>
-
-    <!-- <div class="slide-btn">
-      <div class="start">
-        <img src="./image/btn_commonPlay.png" alt="">
-      </div>
-      <div class="stop">
-        <img src="./image/btn_commonStop.png" alt="">
-      </div>
-    </div> -->
     
+  <div class="contr">
+    <div class="swiper-pagination"></div>
+    <div class="Btn">
+      <div class="stop"></div>
+      <div class="start"></div>
+  </div>
+  </div>
+
+  
   <div class="nexBtn">
     <div class="swiper-prev">
       <img src="./image/btn_arrowPrev.png" alt="왼 화살표">
@@ -349,11 +488,12 @@
   </div>
   <div class="midImg">
     <a href="javascript:void(0)" class="cardBox">
-      <img src="./image/brand sale.png" alt="브랜드 세일" class="eventImg">
       <div class="midText">
         <div class="eventTil">스타필드 하남 4월의 브랜드 행사</div>
         <div class="eventDate">04.01(금) - 04.30(토)</div>
-      </div>  
+      </div>
+      <img src="./image/brand sale.png" alt="브랜드 세일" class="eventImg">
+        
     </a>
     <a href="javascript:void(0)" class="cardBox">
       <img src="./image/event.png" alt="브랜드 세일" class="eventImg">
@@ -450,7 +590,8 @@
       <div class="swiper-prev">
         <img src="./image/btn_swypeFieldPrev.png" alt="왼 화살표">
       </div>
-      <div class="platBtn"></div>
+      <div class="stop"></div>
+      <div class="start"></div>
       <div class="swiper-next">
         <img src="./image/btn_swypeFieldNext.png" alt="오 화살표">
       </div>
@@ -617,7 +758,10 @@
           <a href="javascript:void(0)">스타벅스 커피 코리아</a>
           <a href="javascript:void(0)">조선호텔앤리조트</a>
         </div>
-        <div class="famSite">패밀리 사이트</div>
+
+        <div class="famSite">패밀리 사이트
+          
+        </div>
       </div>
     </div>
 

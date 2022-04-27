@@ -1,8 +1,6 @@
 /* COMMON */
 body {
   position: relative;
-  /* height: 2000px; */
-  /* background-color: blanchedalmond; */
   font-size: 10px;
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -10,8 +8,8 @@ a {
   display: block;
   text-decoration: none;
   font-weight: normal;
-  font-size: 10px;
   color: #000;
+  font-size: 10px;
   font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -23,13 +21,15 @@ a {
 /* HEADER */
 header {
   width: 100%;
-  position: fixed;
   z-index: 9;
   border-top: 5px solid #d50032;
   background-color: #fff;
   position: fixed;
   right: 0;
   left: 0;
+}
+.headNone {
+  display: none;
 }
 header .topBox {
   display: flex;
@@ -45,7 +45,6 @@ header .topBox .weather {
   height: 100%;
   flex-shrink: 0;
   margin-left: 30px;
-  /* background-color: antiquewhite; */
 }
 header .topBox .weather .weatherIcon {
   height: 100%;
@@ -83,12 +82,18 @@ header .topBox .info {
   width: 250px;
   flex-shrink: 0;
   margin-right: 30px;
-  /* background-color: antiquewhite; */
 }
 header .topBox .info .infoBox {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
+}
+header .topBox .info .infoBox .login,
+header .topBox .info .infoBox .search img {
+  cursor: pointer;
+}
+header .topBox .info .infoBox .search{
+  cursor: default;
 }
 header .topBox .info .infoBox .search::before {
   content: "";
@@ -99,33 +104,90 @@ header .topBox .info .infoBox .search::before {
   margin: auto 1.4rem;
   margin-bottom: 0.1rem;
 }
-header .menu {
-  /* background-color: rgb(103, 220, 156); */
-}
-header .menu .title {
-  /* 플렉스 아이템 */
-  width: 16.66%;
-  text-align: center;
-  padding: 1.4rem 0;
-}
-header .menu .title a {
-  font-size: 1rem;
-  font-weight: 500;
-}
-/* 아이콘띄우기 */
-header .menu .title:hover {
 
+
+/* HEADSCROLL */
+/* HEADSCROLL */
+.headScroll {
+  display: none;
+  width: 100%;
+  z-index: 9;
+  border-top: 5px solid #d50032;
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  padding: 10px 0;
 }
-/* 메뉴창 열기 */
-header .menu:hover~.hide {
+.headScrollBlock {
   display: block;
 }
-header .hide {
-  display: none;
-  border-top: 2px solid red;
-  /* background-color: rgb(130, 92, 50); */
-  right: 0;
+.headScroll .logo {
+  width: 250px;
+  position: absolute;
+  text-align: center;
   left: 0;
+}
+.headScroll .logo .logoBox {
+
+}
+.headScroll .logo .logoBox .logoImg {
+  width: 180px;
+}
+.headScroll .menu{
+
+}
+.headScroll .search {
+  width: 250px;
+  height: 19px;
+  position: absolute;
+  top: 40%;
+  right: 2%;
+}
+.headScroll .search img {
+  position: absolute;
+  right: 0;
+}
+/* 공통 메뉴 리스트 */
+/* 공통 메뉴 리스트 */
+.menu {
+  position: relative;
+}
+.menu .title {
+  width: 16.66%;
+  position: relative;
+  text-align: center;
+  padding: 1.4rem 0;
+  cursor: pointer;
+}
+.menu .title a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+.menu .title:hover a {
+  color: #d50032;
+}
+.menu .title:hover a::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  background-color: #d50032;
+  top: 10%;
+  left: 48%;
+  transform: rotate(-45deg);
+
+}
+.menu:hover .hide {
+  display: block;
+}
+.hide {
+  width: 100vw;
+  display: none;
+  border-top: 2px solid #d50032;
+  position: absolute;
+  top: 60px;
+  background-color: #fff;
 }
 .Inner {
   width: calc((1024px/10)*8);
@@ -134,18 +196,21 @@ header .hide {
   margin: 0 auto;
   justify-content: center;
 }
-header .hide .Inner {
+.hide .Inner {
   top: 1.3rem;
-  /* background-color: tan; */
 }
-header .hide .Inner .hideGrow {
+.hide .Inner .hideGrow {
   width: 16.66%;
   text-align: center;
   padding: 1rem 0 4.8rem 0;
 }
-header .hide .Inner .hideGrow a {
+.hide .Inner .hideGrow a {
   line-height: 2.2rem;
   font-size: 0.8rem;
+  color: #000;
+}
+.hide .Inner .hideGrow a:hover {
+  color: #d50032;
 }
 
 
@@ -242,17 +307,24 @@ header .hide .Inner .hideGrow a {
   top: 0;
   left: 17%;
 }
-.topMain .swiper-pagination {
-  width: auto;
-  display: inline-block;
-  position: relative;
+.topMain .contr {
+  width: 13rem;
   border-radius: 1.5rem 1.5rem;
   background-color: rgba(0,0,0,0.4);
-  padding: 0.6rem 1.7rem;
+  padding: 1rem 1.7rem;
+  position: relative;
+  display: flex;
+  left: 43%;
   bottom: 5rem;
-  z-index: 8;
+  z-index: 3;
 }
-.topMain .swiper-pagination .swiper-pagination-bullet {
+.topMain .contr .swiper-pagination {
+  width: auto;
+  position: absolute;
+  bottom: 0.6rem;
+  left: 2rem;
+}
+.topMain .contr .swiper-pagination .swiper-pagination-bullet {
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 0.7rem 0.7rem;
@@ -260,31 +332,64 @@ header .hide .Inner .hideGrow a {
   opacity: 1;
   margin-left: 0.8rem;
 }
-.topMain .swiper-pagination .swiper-pagination-bullet:first-child {
+.topMain .contr .swiper-pagination .swiper-pagination-bullet:first-child {
   margin-left: 0;
 }
-.topMain .swiper-pagination .swiper-pagination-bullet-active {
+.topMain .contr .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #c30e2e;
 }
-.topMain .nexBtn {
+.topMain .Btn::before {
+  content: '';
+  width: 0.1rem;
+  height: 0.9rem;
+  position: absolute;
+  background: #fff;
+  bottom: 0.5rem;
+  right: 3.8rem;
+}
+.topMain .stopB {
+  width: 13px;
+  height: 14px;
+  background-image: url(../image/btn_commonStop.png);
+  position: absolute;
+  right: 2rem;
+  bottom: 0.6rem;
+  cursor: pointer;
+}
+.topMain .startB {
+  width: 13px;
+  height: 14px;
+  background-image: url(../image/btn_commonPlay.png);
+  position: absolute;
+  right: 2rem;
+  bottom: 0.6rem;
+  cursor: pointer;
 }
 .topMain .swiper-prev {
   width: 7rem;
-  height: 100%;
+  height: 95%;
   position: absolute;
-  top: 284px;
+  top: 0;
   left: 0;
   z-index: 5;
   text-align: center;
 }
-.topMain .swiper-next {
-  width: 7rem;
-  height: 100%;
+.topMain .swiper-prev img {
   position: absolute;
   top: 284px;
+}
+.topMain .swiper-next {
+  width: 7rem;
+  height: 95%;
+  position: absolute;
+  top: 0;
   right: 0;
   z-index: 5;
   text-align: center;
+}
+.topMain .swiper-next img {
+  position: absolute;
+  top: 284px;
 }
 
 
@@ -314,29 +419,58 @@ header .hide .Inner .hideGrow a {
   margin: 0 auto;
   padding-top: 4rem;
   display: flex;
-  box-sizing: border-box;
 }
 .midMain .midImg .cardBox {
+  width: 277px;
+  height: 386px;
+  margin-left: 2%;
+  position: relative;
+  overflow: hidden;
+  
+}
+.midMain .midImg .cardBox::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  margin-left: 2%;
+  box-sizing: border-box;
+  transition: 0.5s all;
+  border: 0.2rem solid #c30e2e;
+  opacity: 0;
+  z-index: 3;
 }
-.midMain .midImg .cardBox:hover {
-
+.midMain .midImg .cardBox:hover::after {
+  opacity: 1;
 }
 .midMain .midImg .cardBox:first-child {
   margin-left: 0;
 }
 .midMain .midImg .cardBox .eventImg {
   height: 277px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s all;
+}
+.midMain .midImg .cardBox:hover .eventImg {
+  transform: scale(1.1);
+  transition: 0.5s all;
+  margin: auto;
 }
 .midMain .midImg .cardBox .midText {
+  width: 277px;
   height: 70px;
   background-color: #eeeeee;
+  position: absolute;
+  bottom: 0;
   padding: 20px;
   margin-top: -1px;
   text-align: left;
+  z-index: 2;
 }
 .midMain .midImg .cardBox .eventTil {
   font-size: 1rem;
@@ -409,27 +543,7 @@ header .hide .Inner .hideGrow a {
 
 
 
-/* .filMain .platBtn {
-  background-image: url('../image/btn_commonStop.png');
-  border-radius: 1.5rem 1.5rem;
-  background-color: rgba(0,0,0,0.4);
-  padding: 0.8rem 1.7rem;
-  z-index: 8;
-}
-.topMain .swiper-pagination .swiper-pagination-bullet {
-  width: 0.7rem;
-  height: 0.7rem;
-  border-radius: 0.7rem 0.7rem;
-  background-color: #fff;
-  opacity: 1;
-  margin-left: 0.8rem;
-}
-.topMain .swiper-pagination .swiper-pagination-bullet:first-child {
-  margin-left: 0;
-}
-.topMain .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #c30e2e;
-} */
+
 .filMain .netBtn {
   display: flex;
   margin-top: 4rem;
@@ -438,7 +552,7 @@ header .hide .Inner .hideGrow a {
   top: 0;
   bottom: 0;
 }
-.filMain .netBtn .platBtn {
+.filMain .netBtn .stopB {
   background-image: url(../image/btn_commonStop.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -446,17 +560,30 @@ header .hide .Inner .hideGrow a {
   padding: 0.8rem 1.7rem;
   border-radius: 1.5rem 1.5rem;
   margin-left: 1rem;
+  cursor: pointer;
+}
+.filMain .netBtn .startB {
+  background-image: url(../image/btn_commonPlay.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0,0,0,0.4);
+  padding: 0.8rem 1.7rem;
+  border-radius: 1.5rem 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
 }
 .filMain .swiper-prev {
   width: 2.6rem;
   height: 2.6rem;
   display: inline-block;
+  cursor: pointer;
 }
 .filMain .swiper-next {
   width: 2.6rem;
   height: 2.6rem;
   display: inline-block;
   margin-left: 1rem;
+  cursor: pointer;
 
 }
 .filMain .swiper-next img,
@@ -575,10 +702,12 @@ header .hide .Inner .hideGrow a {
 .bestMain .bestBox .swiper-prev {
   margin: auto 0;
   text-align: center;
+  cursor: pointer;
 }
 .bestMain .bestBox .swiper-next {
   margin: auto 0;
   text-align: center;
+  cursor: pointer;
 }
 .bestMain .moreBtn {
   width: 5rem;
@@ -672,6 +801,7 @@ footer .top .right .blog {
   height: 28px;
   border-radius: 1.4rem;
   background-color: #786e6b;
+  cursor: pointer;
 }
 footer .top .right .ins,
 footer .top .right .you,
@@ -710,6 +840,11 @@ footer .bottom .left {
 footer .bottom .left .up {
   margin-top: 2.5rem;
 }
+footer .bottom .left .up .one,
+footer .bottom .left .up .two,
+footer .bottom .left .up .three {
+  cursor: pointer;
+}
 footer .bottom .left .up .two {
   color: #d50032;
 }
@@ -736,23 +871,37 @@ footer .bottom .right {
 }
 footer .bottom .right .family {
   width: 120px;
+  height: 100%;
+  background: #000000;
+  border: 0.1rem solid #d1d1d1;
 }
 footer .bottom .right .family .famList {
-  display: none;
+  height: 0;
+  overflow: hidden;
 }
-footer .bottom .right .family .famSite {
+footer .bottom .right .family .famList a {
   width: 100%;
+  color: #d1d1d1;
   font-size: 0.8rem;
   padding: 0.5rem 0.2rem 0.5rem 0.5rem;
-  background: #000000;
+}
+footer .bottom .right .family .famBlock {
+  height: 400px;
+  transition: height 0.5s;
+}
+footer .bottom .right .family .famSite {
+  width: 120px;
+  font-size: 0.8rem;
+  padding: 0.5rem 0.2rem 0.5rem 0.5rem;
   text-align: left;
-  border: 0.1rem solid #d1d1d1;
+  cursor: pointer;
 }
 footer .bottom .right .family .famSite::after {
   content: '';
-  right: 0;
+  height: 29px;
+  right: 5%;
   border: 0.4rem solid transparent;
   border-top-color: #eeeeee;
   position: absolute;
-  top: 42%;
+  bottom: -22px;
 }

@@ -11,6 +11,23 @@ document.getElementById('current_date').innerHTML = (("00"+month.toString()).sli
 
 
 
+
+// 헤더 스크롤반응
+// 헤더 스크롤반응
+const head = document.querySelector('header')
+const headScroll = document.querySelector('.headScroll');
+
+window.addEventListener('scroll', _.throttle(function () {
+  if (window,scrollY > 150) {
+    head.classList.add('headNone');
+    headScroll.classList.add('headScrollBlock');
+  } else {
+    head.classList.remove('headNone');
+    headScroll.classList.remove('headScrollBlock');
+  }
+},300));
+
+
 // 배지 클릭 이벤트  
 // 배지 클릭 이벤트
 const badgesEl = document.querySelector('.badges')
@@ -45,7 +62,23 @@ topEl.addEventListener('click', function () {
 
 // 메인상단이미지 스와이퍼
 // 메인상단이미지 스와이퍼
-new Swiper('.topMain .swiper', {
+const stopB = document.querySelector('.topMain .stop')
+const startB = document.querySelector('.topMain .start')
+stopB.classList.add('stopB')
+
+stopB.addEventListener('click', function() {
+  topSwiper.autoplay.stop()
+  stopB.classList.remove('stopB')
+  startB.classList.add('startB')
+  })
+
+startB.addEventListener('click', function() {
+  topSwiper.autoplay.start()
+  stopB.classList.add('stopB')
+  startB.classList.remove('startB')
+  })
+ 
+const topSwiper = new Swiper('.topMain .swiper', {
   loop: true,
   autoplay: {
     delay: 4000
@@ -61,15 +94,60 @@ new Swiper('.topMain .swiper', {
   }
 });
 
+const prev = document.querySelector('.topMain .swiper-prev')
+const slide = document.querySelector('.topMain .swiper-slide-active')
+
+prev.addEventListener('mouseover', function() {
+  gsap.to(document.querySelector('.topMain .swiper-slide-active'), .2, {
+    x: 100
+  });
+})
+prev.addEventListener('mouseout', function() {
+  gsap.to(slide, .2, {
+    x: 0
+  });
+})
+
+const next = document.querySelector('.topMain .swiper-next')
+
+next.addEventListener('mouseover', function() {
+  gsap.to(slide, .2, {
+    x: -100
+  });
+})
+next.addEventListener('mouseout', function() {
+  gsap.to(slide, .2, {
+    x: 0
+  });
+})
+
 
 
 
 // 메인스페셜이미지 스와이퍼
 // 메인스페셜이미지 스와이퍼
-new Swiper('.filMain .swiper', {
+const stopBtn = document.querySelector('.filMain .stop')
+const startBtn = document.querySelector('.filMain .start')
+stopBtn.classList.add('stopB')
+
+stopBtn.addEventListener('click', function() {
+  filSwiper.autoplay.stop()
+  stopBtn.classList.remove('stopB')
+  startBtn.classList.add('startB')
+  })
+
+startBtn.addEventListener('click', function() {
+  filSwiper.autoplay.start()
+  stopBtn.classList.add('stopB')
+  startBtn.classList.remove('startB')
+  })
+
+const filSwiper = new Swiper('.filMain .swiper', {
   loop: true,
   speed: 1000,
-  
+  autoplay: {
+    delay: 4000
+  },
   effect: 'coverflow',
   grabCursor: true,
   centeredSlides: true,
@@ -143,17 +221,27 @@ new Swiper('.bestMain .swiper', {
 
 // 푸터언어클릭 이벤트
 // 푸터언어클릭 이벤트
-const korean = document.querySelector('.korean')
+const korea = document.querySelector('.korea')
 const koList = document.querySelector('.koList')
 
-let isHideKoList = true;
-korean.addEventListener('click', function () {
-  isHideKoList = !isHideKoList
-  if (isHideKoList) {
-    //숨김처리
-    koList.classList.add('block');
-  } else {
-    //보임처리 
-    koList.classList.remove('block');
-  }
+korea.addEventListener('mouseover', function () {
+    koList.classList.add('block')
+});
+korea.addEventListener('mouseout', function () {
+  koList.classList.remove('block')
+});
+
+
+
+
+// 패밀리사이트클릭 이벤트
+// 패밀리사이트클릭 이벤트
+const famSite = document.querySelector('.family')
+const famList = document.querySelector('.famList')
+
+famSite.addEventListener('mouseover', function () {
+  famList.classList.add('famBlock')
+});
+famSite.addEventListener('mouseout', function () {
+  famList.classList.remove('famBlock')
 });
