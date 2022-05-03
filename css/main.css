@@ -16,7 +16,6 @@ a {
 
 
 
-
 /* HEADER */
 /* HEADER */
 header {
@@ -61,9 +60,6 @@ header .topBox .weather .openHour {
   display: flex;
   margin-top: 3px;
 }
-header .topBox .weather .openHour .open {
-
-}
 header .topBox .weather .openHour .time {
   margin-left: 0.3rem;
   color: #c30e2e;
@@ -106,6 +102,8 @@ header .topBox .info .infoBox .search::before {
 }
 
 
+
+
 /* HEADSCROLL */
 /* HEADSCROLL */
 .headScroll {
@@ -127,14 +125,8 @@ header .topBox .info .infoBox .search::before {
   text-align: center;
   left: 0;
 }
-.headScroll .logo .logoBox {
-
-}
 .headScroll .logo .logoBox .logoImg {
   width: 180px;
-}
-.headScroll .menu{
-
 }
 .headScroll .search {
   width: 250px;
@@ -146,7 +138,12 @@ header .topBox .info .infoBox .search::before {
 .headScroll .search img {
   position: absolute;
   right: 0;
+  cursor: pointer;
 }
+
+
+
+
 /* 공통 메뉴 리스트 */
 /* 공통 메뉴 리스트 */
 .menu {
@@ -176,18 +173,22 @@ header .topBox .info .infoBox .search::before {
   top: 10%;
   left: 48%;
   transform: rotate(-45deg);
-
 }
 .menu:hover .hide {
-  display: block;
+  height: 409px;
+  opacity: 1;
+  transition: height 0.5s;
 }
 .hide {
   width: 100vw;
-  display: none;
+  height: 0;
   border-top: 2px solid #d50032;
   position: absolute;
   top: 60px;
   background-color: #fff;
+  overflow: hidden;
+  opacity: 0;
+
 }
 .Inner {
   width: calc((1024px/10)*8);
@@ -295,8 +296,9 @@ header .topBox .info .infoBox .search::before {
 .topMain {
   width: 1548px;
   position: relative;
-  margin: 0 auto;
   top: 157px;
+  left: 50%;
+  margin-left: -774px;
   text-align: center;
 }
 .topMain .topMainBox {
@@ -400,10 +402,6 @@ header .topBox .info .infoBox .search::before {
 .midMain {
   padding: 15rem 0 9em;
   text-align: center;
-  
-}
-.midMain .midTitle {
-
 }
 .midMain .midTitle .bigTil {
   font-size: 2.7rem;
@@ -426,7 +424,6 @@ header .topBox .info .infoBox .search::before {
   margin-left: 2%;
   position: relative;
   overflow: hidden;
-  
 }
 .midMain .midImg .cardBox::after {
   content: "";
@@ -538,12 +535,6 @@ header .topBox .info .infoBox .search::before {
   max-width: 364%;
   padding-top: 3.5rem;
 }
-
-
-
-
-
-
 .filMain .netBtn {
   display: flex;
   margin-top: 4rem;
@@ -584,7 +575,6 @@ header .topBox .info .infoBox .search::before {
   display: inline-block;
   margin-left: 1rem;
   cursor: pointer;
-
 }
 .filMain .swiper-next img,
 .filMain .swiper-prev img {
@@ -606,9 +596,6 @@ header .topBox .info .infoBox .search::before {
   text-align: center;
   overflow: hidden;
   padding: 8rem 0 4rem 0;
-}
-.bestMain .bestTitle {
-  
 }
 .bestMain .bestTitle .bigTil {
   font-size: 2.5rem;
@@ -679,7 +666,6 @@ header .topBox .info .infoBox .search::before {
   border-radius: 1.5rem 1.5rem;
   padding: 0.6rem 1.7rem;
   margin-top: 20px;
-  
   display: inline-block;
   text-align: center;
 }
@@ -722,8 +708,9 @@ header .topBox .info .infoBox .search::before {
 
 
 
-/* FOOTER */
-/* FOOTER */
+
+/* FOOTER TOP*/
+/* FOOTER TOP*/
 footer {
   background-color: #1f1f1f;
   color: #d1d1d1;
@@ -748,7 +735,6 @@ footer .top .left .list {
   margin-right: 4rem;
 }
 footer .top .left .list .hanamTitle {
-  /* 1.6 */
   font-size: 1rem;
   margin-bottom: 1.2rem;
   color: #ba9775;
@@ -764,7 +750,6 @@ footer .top .right {
 }
 footer .top .right .korea {
   position: relative;
-  
 }
 footer .top .right .korea .korean {
   font-size: 0.9rem;
@@ -829,6 +814,10 @@ footer .top .right .blog .img {
 }
 
 
+
+
+/* FOOTER BOTTOM*/
+/* FOOTER BOTTOM*/
 footer .bottom {
   position: relative;
   display: flex;
@@ -861,8 +850,6 @@ footer .bottom .left .up .three::before {
 footer .bottom .left .down {
   margin-top: 2rem;
 }
-
-
 footer .bottom .right {
   position: absolute;
   bottom: 3rem;

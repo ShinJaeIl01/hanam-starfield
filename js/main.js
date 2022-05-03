@@ -7,7 +7,6 @@ month = date.getMonth() + 1
 day = date.getDate()
 dd = date.getDay()
 document.getElementById('current_date').innerHTML = (("00"+month.toString()).slice(-2)) + '월' + ' ' + (("00"+day.toString()).slice(-2)) + '일' + ' ' + week[date.getDay()] + '요일'
-// document.getElementById('current_date').innerHTML = '0' + month + '월' + ' ' + day + '일' + ' ' + week[date.getDay()] + '요일'
 
 
 
@@ -15,17 +14,19 @@ document.getElementById('current_date').innerHTML = (("00"+month.toString()).sli
 // 헤더 스크롤반응
 // 헤더 스크롤반응
 const head = document.querySelector('header')
-const headScroll = document.querySelector('.headScroll');
+const headScroll = document.querySelector('.headScroll')
 
 window.addEventListener('scroll', _.throttle(function () {
   if (window,scrollY > 150) {
-    head.classList.add('headNone');
-    headScroll.classList.add('headScrollBlock');
+    head.classList.add('headNone')
+    headScroll.classList.add('headScrollBlock')
   } else {
-    head.classList.remove('headNone');
-    headScroll.classList.remove('headScrollBlock');
+    head.classList.remove('headNone')
+    headScroll.classList.remove('headScrollBlock')
   }
-},300));
+},300))
+
+
 
 
 // 배지 클릭 이벤트  
@@ -34,29 +35,29 @@ const badgesEl = document.querySelector('.badges')
 const badgeRed = document.querySelector('.red')
 const store = document.querySelector('.store')
 
-let isHideBadge = true;
+let isHideBadge = true
 badgeRed.addEventListener('click', function () {
   isHideBadge = !isHideBadge
   if (isHideBadge) {
-    //숨김처리
-    store.classList.add('block');
+    store.classList.add('block')
   } else {
-    //보임처리 
-    store.classList.remove('block');
+    store.classList.remove('block')
   }
-});
+})
+
 
 
 
 // 상단 이동
 // 상단 이동
-const topEl = document.querySelector('.topBtn');
+const topEl = document.querySelector('.topBtn')
 
 topEl.addEventListener('click', function () {
   gsap.to(window, .7, {
     scrollTo: 0
   })
 })
+
 
 
 
@@ -71,7 +72,6 @@ stopB.addEventListener('click', function() {
   stopB.classList.remove('stopB')
   startB.classList.add('startB')
   })
-
 startB.addEventListener('click', function() {
   topSwiper.autoplay.start()
   stopB.classList.add('stopB')
@@ -84,41 +84,38 @@ const topSwiper = new Swiper('.topMain .swiper', {
     delay: 4000
   },
   pagination: {
-    el: '.topMain .swiper-pagination', //페이지 번호 요소 선택자
-    clickable: true //사용자의 페이지 번호 요소 제어
+    el: '.topMain .swiper-pagination',
+    clickable: true
   },
-  
   navigation: {
     prevEl: '.topMain .swiper-prev',
     nextEl: '.topMain .swiper-next',
   }
-});
+})
 
+const next = document.querySelector('.topMain .swiper-next')
 const prev = document.querySelector('.topMain .swiper-prev')
 const slide = document.querySelector('.topMain .swiper-slide-active')
 
 prev.addEventListener('mouseover', function() {
-  gsap.to(document.querySelector('.topMain .swiper-slide-active'), .2, {
+  gsap.to(slide, .3, {
     x: 100
-  });
+  })
 })
 prev.addEventListener('mouseout', function() {
-  gsap.to(slide, .2, {
+  gsap.to(slide, .3, {
     x: 0
-  });
+  })
 })
-
-const next = document.querySelector('.topMain .swiper-next')
-
 next.addEventListener('mouseover', function() {
-  gsap.to(slide, .2, {
+  gsap.to(slide, .3, {
     x: -100
-  });
+  })
 })
 next.addEventListener('mouseout', function() {
-  gsap.to(slide, .2, {
+  gsap.to(slide, .3, {
     x: 0
-  });
+  })
 })
 
 
@@ -160,28 +157,11 @@ const filSwiper = new Swiper('.filMain .swiper', {
     modifier: 1,
     slideShadows: false,
   },
-
-  
   navigation: {
     prevEl: '.filMain .swiper-prev',
     nextEl: '.filMain .swiper-next',
   }
-});
-
-// const playBtn = document.querySelector('.platBtn')
-
-// function filmainPlay() {
-//   Swiper('.filMain .swiper', {
-//     autoplay: {
-//       delay: 3000,
-//     },  
-//   },
-// }
-
-// playBtn.addEventListener('click',filmainPlay)
-
-
-
+})
 
 
 
@@ -192,56 +172,57 @@ new Swiper('.bestMain .swiper', {
   effect: 'coverflow',
   slidesPerView: 3,
   spaceBetween: 20,
-  // initialSlide: 1,
   centeredSlides: true,
   loop: true,
   slideShadows:true,
-  
   coverflowEffect: {
     scale: 0.9,
-    // stretch: 0,
     rotate : 0,
     depth: 10,
     modifier: 1,
     slideShadows : false
   },
-
-    pagination: {
-      el: '.bestMain .swiper-pagination', //페이지 번호 요소 선택자
-      clickable: true //사용자의 페이지 번호 요소 제어
-    },
-    navigation: {
-      prevEl: '.bestMain .swiper-prev',
-      nextEl: '.bestMain .swiper-next'
-    }
-  });
-
+  pagination: {
+    el: '.bestMain .swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    prevEl: '.bestMain .swiper-prev',
+    nextEl: '.bestMain .swiper-next'
+  }
+})
 
 
 
-// 푸터언어클릭 이벤트
-// 푸터언어클릭 이벤트
+
+// FOOTER언어 이벤트
+// FOOTER언어 이벤트
 const korea = document.querySelector('.korea')
 const koList = document.querySelector('.koList')
 
 korea.addEventListener('mouseover', function () {
     koList.classList.add('block')
-});
+})
 korea.addEventListener('mouseout', function () {
   koList.classList.remove('block')
-});
+})
 
 
 
 
-// 패밀리사이트클릭 이벤트
-// 패밀리사이트클릭 이벤트
+// FOOTER패밀리사이트 이벤트
+// FOOTER패밀리사이트 이벤트
 const famSite = document.querySelector('.family')
 const famList = document.querySelector('.famList')
 
 famSite.addEventListener('mouseover', function () {
   famList.classList.add('famBlock')
-});
+})
 famSite.addEventListener('mouseout', function () {
   famList.classList.remove('famBlock')
-});
+})
+
+
+
+
+
